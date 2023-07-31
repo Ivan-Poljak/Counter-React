@@ -1,0 +1,26 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  border: 2px solid red;
+}
+
+p {
+  border: 2px solid green;
+}
+
+.btn-container {
+  border: 2px solid blue;
+}
