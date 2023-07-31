@@ -7,13 +7,17 @@ function Counter() {
 
   return (
     <div className="main-container">
+      <h2 className="title">Counter App</h2>
       <p className="number">{number}</p>
       <div className="btn-container">
-        <button className="plus" onClick={() => setNumber(number + 1)}>
+        <button className="plus btn" onClick={() => setNumber(number + 1)}>
           +
         </button>
-        <button className="minus" onClick={() => setNumber(number - 1)}>
+        <button className="minus btn" onClick={() => setNumber(number - 1)}>
           -
+        </button>
+        <button className="reset" onClick={() => setNumber(0)}>
+          Reset
         </button>
       </div>
     </div>

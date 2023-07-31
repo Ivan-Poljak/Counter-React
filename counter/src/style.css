@@ -2,6 +2,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0e1538;
+  color: #fff;
 }
 
 .main-container {
@@ -13,14 +16,76 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 
-  border: 2px solid red;
+  background-color: rgba(27, 25, 25, 0.7);
+  padding: 2em;
+
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.main-container::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140%;
+  background: linear-gradient(#00ccff, #d500f9);
+  animation: rotate 4s linear infinite;
+
+  z-index: -9;
+}
+
+.main-container::after {
+  content: "";
+  position: absolute;
+  background: #0e1538;
+  inset: 5px;
+  border-radius: 0.8rem;
+
+  z-index: -9;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin: 0;
 }
 
 p {
-  border: 2px solid green;
+  font-size: 3rem;
+  margin: 3rem;
 }
 
 .btn-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem;
   border: 2px solid blue;
+  border-radius: 1rem;
+}
+
+button:hover {
+  background-color: rgba(175, 153, 153, 0.4);
+  color: #fff;
+}
+
+.btn {
+  width: 3rem;
+  height: 3rem;
 }
